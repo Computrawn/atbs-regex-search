@@ -11,22 +11,20 @@ import re
 def regex_search():
     """Open and read all .txt files in text_files directory."""
     file_path = Path.cwd() / Path("text_files")
-    user_input = input("Please type a regular expression to start search: ")
-    user_regex = re.compile(user_input)
-    found = 0
+    user_regex = re.compile(input("Please type a regular expression to start search: "))
+    match_found = 0
 
     for text_file in file_path.glob("*.txt"):
         contents = text_file.read_text()
+        num_of_files = len(list(file_path.glob("*.txt")))
+        match_object = user_regex.findall(contents)
+        length = len(match_object)
 
-        # Search contents for user-defined regular expression.
-        mo = user_regex.findall(contents)
+        for match in range(length):
+            print(f"* {match_object[match]}")
+            match_found += 1
 
-        # Print results to screen.
-        for i in range(len(mo)):
-            print(mo[i])
-            found += 1
-
-    print(f"Your search yielded {found} matches.")
+    print(f"Your search yielded {match_found} matches from {num_of_files} text files.")
 
 
 regex_search()
