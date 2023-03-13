@@ -9,7 +9,8 @@ import re
 
 
 def regex_search():
-    """Open and read all .txt files in text_files directory."""
+    """Open and read all .txt files in text_files directory,
+    search for user-defined regex and print results."""
     file_path = Path.cwd() / Path("text_files")
     user_regex = re.compile(input("Please type a regular expression to start search: "))
     match_found = 0

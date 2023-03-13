@@ -1,0 +1,3 @@
+Ideas for improvement
+* Let user define folder location with input.
+* Save results to CSV file in user-defined location.
