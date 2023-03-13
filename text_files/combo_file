@@ -1,0 +1,2 @@
+This looks just like combo_file.txt but is missing the extension, which should 
+excluse it from the glob search.
