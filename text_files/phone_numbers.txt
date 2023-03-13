@@ -1,0 +1,17 @@
+This is a list of phone numbers in U.S. format with various delimiters.
+
+800-555-0123
+
+900.555.4567
+
+(800) 555-0125
+
+(900) 555.4569
+
+800/555/0124
+
+900/555/4568
+
+This is a sentence that contains the phone number 800-555.1234.
+This is a sentence that contains a few more phone numbers — (900) 555.5555 and (800) 555-5670 
+and 900/534/5431 and 1-800/555-0909.
