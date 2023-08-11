@@ -1,11 +1,17 @@
-#! python3
-"""
-regex_search.py — An exercise in reading and writing files.
-For more info, see project_details.txt.
-"""
+#!/usr/bin/env python3
+# regex_search.py — An exercise in reading and writin files.
+# For more information, see README.md
 
+import logging
 from pathlib import Path
 import re
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    filename="logging.txt",
+    format="%(asctime)s -  %(levelname)s -  %(message)s",
+)
+logging.disable(logging.CRITICAL)  # Note out to enable logging.
 
 
 def regex_search():
@@ -28,4 +34,9 @@ def regex_search():
     print(f"Your search yielded {match_found} matches from {num_of_files} text files.")
 
 
-regex_search()
+def main() -> None:
+    regex_search()
+
+
+if __name__ == "__main__":
+    main()
